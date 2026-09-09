@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## [Unreleased]
 
+### 新增（AGENTS.md 软链接指向项目根 CLAUDE.md）
+
+- **为什么改**：CLAUDE.md 已从 `.claude/` 移到项目根（对齐全局约定「角色化 CLAUDE.md 直接放项目根 + 项目根建 AGENTS.md 软链接指向它」），软链接让只认 `AGENTS.md` 的 agent 工具（如 ZCode）也能加载同一份项目指南，两文件内容天然同步、无需双份维护。
+- **改了什么**：新建项目根软链接 `AGENTS.md` → `CLAUDE.md`（`ln -s CLAUDE.md AGENTS.md`），不改动 CLAUDE.md 本身。
+
 ### 变更（项目迁移收尾：CLAUDE.md 子项目清单路径更新）
 
 - **为什么改**：本项目现址在 `~/Developer/`（`~/Documents/Projects/` 旧址已弃用，2026-09-08 迁移收尾时发现上级 NeuralCoreAgent 的子项目清单与本仓 `.claude/CLAUDE.md` 仍指旧路径），避免后续会话被引导到不存在的位置。
